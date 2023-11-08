@@ -12,7 +12,28 @@ export class AppComponent {
     new WishItem('Learn React', true),
     new WishItem('Learn Vue'),
   ];
+
+  listFilter: string = '0';
+
+  newWishText = '';
+
   title = 'angular-wishlist';
+
+  get visibleItems(): WishItem[] {
+    let value = this.listFilter;
+    if (value === '0') {
+      return this.items;
+    } else if (value === '1') {
+      return this.items.filter((item) => !item.isComplete);
+    } else {
+      return this.items.filter((item) => item.isComplete);
+    }
+  }
+
+  addNewWish() {
+    this.items.push(new WishItem(this.newWishText));
+    this.newWishText = '';
+  }
 
   toggleItem(item: WishItem) {
     item.isComplete = !item.isComplete;
