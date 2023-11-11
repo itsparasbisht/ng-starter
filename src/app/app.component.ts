@@ -7,10 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-wishlist';
-  showName(name: string) {
-    alert(name);
-  }
-  showValue(value: string) {
-    console.log(value);
+  count = 0;
+  counter(type: string) {
+    type === 'increment' ? this.count++ : this.count--;
   }
 }

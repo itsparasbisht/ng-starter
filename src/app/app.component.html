@@ -1,3 +1,4 @@
 <h1 class={{title}}>hello ng {{title}}</h1>
-<button (click)="showName('harry')">Click Me</button>
-<input type="text" #inp1 (keyup)="showValue(inp1.value)">
+<button (click)="counter('decrement')">-</button>
+<h1>{{count}}</h1>
+<button (click)="counter('increment')">+</button>
