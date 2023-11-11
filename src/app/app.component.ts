@@ -7,7 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-wishlist';
-  getValue() {
-    return 'JavaScript';
+  showName(name: string) {
+    alert(name);
+  }
+  showValue(value: string) {
+    console.log(value);
   }
 }
