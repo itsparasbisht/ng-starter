@@ -1,4 +1,2 @@
-<h1>hello</h1>
-<div *ngFor="let user of users">
-    <h1>{{user}}</h1>
-</div>
+<h1 [style.color]="textColor" [style.backgroundColor]="bgColor">hello</h1>
+<button (click)="toggleTheme()">Toggle</button>

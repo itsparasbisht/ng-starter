@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  users = ['harry', 'niall', 'liam', 'louis', 'zayn'];
+  textColor = 'white';
+  bgColor = 'black';
+
+  toggleTheme() {
+    if (this.textColor === 'white') {
+      this.textColor = 'black';
+      this.bgColor = 'white';
+    } else {
+      this.textColor = 'white';
+      this.bgColor = 'black';
+    }
+  }
 }
