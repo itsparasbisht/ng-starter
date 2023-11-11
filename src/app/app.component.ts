@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -6,16 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  textColor = 'white';
-  bgColor = 'black';
-
-  toggleTheme() {
-    if (this.textColor === 'white') {
-      this.textColor = 'black';
-      this.bgColor = 'white';
-    } else {
-      this.textColor = 'white';
-      this.bgColor = 'black';
-    }
+  handleLogin(values: NgForm) {
+    console.log(values);
   }
 }
