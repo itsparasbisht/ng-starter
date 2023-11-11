@@ -4,9 +4,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
+import { UserListComponent } from './user-list/user-list.component';
+import { StudentListComponent } from './student-list/student-list.component';
+import { CountryComponent } from './country/country.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent],
+  declarations: [AppComponent, HeaderComponent, UserListComponent, StudentListComponent, CountryComponent],
   imports: [BrowserModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
