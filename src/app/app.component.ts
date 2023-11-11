@@ -6,9 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'angular-wishlist';
-  count = 0;
-  counter(type: string) {
-    type === 'increment' ? this.count++ : this.count--;
-  }
+  users = ['harry', 'niall', 'liam', 'louis', 'zayn'];
 }

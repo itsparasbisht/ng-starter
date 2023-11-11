@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -17,7 +18,7 @@ import { UserAuthModule } from './user-auth/user-auth.module';
     StudentListComponent,
     CountryComponent,
   ],
-  imports: [BrowserModule, FormsModule, UserAuthModule],
+  imports: [BrowserModule, FormsModule, UserAuthModule, CommonModule],
   providers: [],
   bootstrap: [AppComponent],
 })
