@@ -1,7 +1,10 @@
-<h1>Login</h1>
-<br>
-<form #loginForm="ngForm" (submit)="handleLogin(loginForm.value)">
-    <input ngModel type="text" name="username" placeholder="enter username"> <br> <br>
-    <input ngModel type="password" name="password" placeholder="enter password"> <br> <br>
-    <button>login</button>
-</form>
+<input type="text" #taskInput>
+<button (click)="addTask(taskInput.value)">add task</button>
+
+<br> <br>
+
+<ul>
+    <li *ngFor="let item of tasks">{{item.task}}
+        <button (click)="removeTask(item.id)">remove</button>
+    </li>
+</ul>
