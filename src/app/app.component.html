@@ -1,10 +1,3 @@
-<input type="text" #taskInput>
-<button (click)="addTask(taskInput.value)">add task</button>
-
-<br> <br>
-
-<ul>
-    <li *ngFor="let item of tasks">{{item.task}}
-        <button (click)="removeTask(item.id)">remove</button>
-    </li>
-</ul>
+<h1>parent</h1>
+<app-child [data]="score"></app-child>
+<button (click)="changeScore()">change</button>
