@@ -1,3 +1,4 @@
 <h1>parent</h1>
-<app-child [data]="score"></app-child>
-<button (click)="changeScore()">change</button>
+<div *ngFor="let user of users">
+    <app-user-info [data]="user" />
+</div>

@@ -7,8 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'hello';
-  score = 8;
-  changeScore() {
-    this.score = Math.floor(Math.random() * 10);
-  }
+  users = [
+    { name: 'John', email: 'john@test.com' },
+    { name: 'Skyler', email: 'skyler@test.com' },
+    { name: 'Emma', email: 'emma@test.com' },
+  ];
 }
