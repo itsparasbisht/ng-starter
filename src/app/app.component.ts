@@ -7,9 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'hello';
-  users = [
-    { name: 'John', email: 'john@test.com' },
-    { name: 'Skyler', email: 'skyler@test.com' },
-    { name: 'Emma', email: 'emma@test.com' },
-  ];
+  user = 'Guest';
+  updateUser(data: string) {
+    this.user = data;
+  }
 }

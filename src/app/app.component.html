@@ -1,4 +1,2 @@
-<h1>parent</h1>
-<div *ngFor="let user of users">
-    <app-user-info [data]="user" />
-</div>
+<h1>hello {{user}}</h1>
+<app-child (updateUserEvent)="updateUser($event)"></app-child>

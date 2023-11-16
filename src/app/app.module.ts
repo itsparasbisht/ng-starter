@@ -4,10 +4,10 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { UserInfoComponent } from './user-info/user-info.component';
+import { ChildComponent } from './child/child.component';
 
 @NgModule({
-  declarations: [AppComponent, UserInfoComponent],
+  declarations: [AppComponent, ChildComponent],
   imports: [BrowserModule, FormsModule, NgbModule],
   providers: [],
   bootstrap: [AppComponent],
