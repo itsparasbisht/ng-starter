@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  name = '';
+  getInput(ref: HTMLInputElement) {
+    console.log(ref);
+  }
 }
