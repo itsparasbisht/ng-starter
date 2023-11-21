@@ -1,11 +1,11 @@
 <h1>hello User</h1>
 
-<form #loginForm="ngForm" (ngSubmit)="handleLogin(loginForm.value)" autocomplete="off">
-    <input type="text" #name="ngModel" name="name" ngModel required>
-    <br> <span *ngIf="name.invalid && name.touched">enter valid name</span> <br>
+<form [formGroup]="loginForm" (ngSubmit)="handleLogin()" autocomplete="off">
+    <input type="text" name="name" formControlName="name">
+    <br> <br>
 
-    <input type="password" #password="ngModel" name="password" ngModel required>
-    <br> <span *ngIf="password.invalid && password.touched">enter valid password</span> <br>
+    <input type="password" name="password" formControlName="password">
+    <br> <br>
 
-    <button [disabled]="loginForm.invalid">Login</button>
+    <button>Login</button>
 </form>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -6,7 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  handleLogin(data: HTMLFormElement) {
-    console.log(data);
+  loginForm = new FormGroup({
+    name: new FormControl(''),
+    password: new FormControl(''),
+  });
+
+  handleLogin() {
+    console.log(this.loginForm.value);
   }
 }
