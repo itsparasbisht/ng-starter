@@ -1,4 +1,9 @@
-<h1>hello</h1>
-<h3>
-    {{ amount | usdToInr :80}}
-</h3>
+<h1>hello User</h1>
+
+<form #loginForm="ngForm" (ngSubmit)="handleLogin(loginForm.value)">
+    <input type="text" name="name" ngModel>
+    <br> <br>
+    <input type="password" name="password" ngModel>
+    <br> <br>
+    <button>Login</button>
+</form>
