@@ -3,13 +3,26 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { ChildComponent } from './child/child.component';
-import { UsdToInrPipe } from './pipes/usd-to-inr.pipe';
 import { RedElDirective } from './red-el.directive';
+import { UserComponent } from './user/user.component';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
+import { Routes, RouterModule } from '@angular/router';
+
+const routes: Routes = [
+  { path: 'about', component: AboutComponent },
+  { path: 'contact', component: ContactComponent },
+];
 
 @NgModule({
-  declarations: [AppComponent, ChildComponent, UsdToInrPipe, RedElDirective],
-  imports: [BrowserModule, ReactiveFormsModule],
+  declarations: [
+    AppComponent,
+    RedElDirective,
+    UserComponent,
+    AboutComponent,
+    ContactComponent,
+  ],
+  imports: [BrowserModule, ReactiveFormsModule, RouterModule.forRoot(routes)],
   providers: [],
   bootstrap: [AppComponent],
 })
