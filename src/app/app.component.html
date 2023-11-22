@@ -2,10 +2,10 @@
 
 <form [formGroup]="loginForm" (ngSubmit)="handleLogin()" autocomplete="off">
     <input type="text" name="name" formControlName="name">
-    <br> <br>
+    <br> <span *ngIf="name && name.invalid && name.touched">invalid name</span> <br>
 
     <input type="password" name="password" formControlName="password">
-    <br> <br>
+    <br> <span *ngIf="password && password.invalid && password.touched">invalid password</span><br>
 
-    <button>Login</button>
+    <button [disabled]="loginForm.invalid">Login</button>
 </form>
