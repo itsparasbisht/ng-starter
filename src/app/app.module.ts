@@ -8,11 +8,14 @@ import { UserComponent } from './user/user.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { Routes, RouterModule } from '@angular/router';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'user/:id', component: UserComponent },
+  { path: '', component: AboutComponent },
+  { path: '**', component: NotFoundComponent },
 ];
 
 @NgModule({
@@ -22,6 +25,7 @@ const routes: Routes = [
     UserComponent,
     AboutComponent,
     ContactComponent,
+    NotFoundComponent,
   ],
   imports: [BrowserModule, ReactiveFormsModule, RouterModule.forRoot(routes)],
   providers: [],
