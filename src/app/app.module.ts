@@ -11,6 +11,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { OurEmployeesComponent } from './our-employees/our-employees.component';
 import { OurHistoryComponent } from './our-history/our-history.component';
+import { HttpClientModule } from '@angular/common/http';
 
 const routes: Routes = [
   {
@@ -38,7 +39,12 @@ const routes: Routes = [
     OurEmployeesComponent,
     OurHistoryComponent,
   ],
-  imports: [BrowserModule, ReactiveFormsModule, RouterModule.forRoot(routes)],
+  imports: [
+    BrowserModule,
+    ReactiveFormsModule,
+    RouterModule.forRoot(routes),
+    HttpClientModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

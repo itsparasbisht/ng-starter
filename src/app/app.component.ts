@@ -7,7 +7,10 @@ import { UserDataService } from './services/user-data.service';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
+  users: any;
   constructor(private userData: UserDataService) {
-    console.log(userData.users());
+    userData.users().subscribe((users) => {
+      this.users = users;
+    });
   }
 }
